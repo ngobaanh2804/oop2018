@@ -1,7 +1,7 @@
 package week1;
 
 public class Student {
-
+    String name;
     // TODO: khai báo các thuộc tính cho Student
 
     // TODO: khai báo các phương thức getter, setter cho Student
