@@ -2,8 +2,14 @@ package week1;
 
 public class Student {
         private String name;
+        private String id;
+        private String group;
+        private String email;
     // TODO: khai báo các thuộc tính cho Student
-
+        public  String getName(){   return name; }      public void setName(){ this.name=name;}
+        public  String getId(){     return id; }        public void setId(){ this.id=id;}
+        public  String getGroup(){  return group; }     public void setGroup(){ this.group=group;}
+        public  String getEmail(){  return email; }     public void setEmail(){ this.email=email;}
     // TODO: khai báo các phương thức getter, setter cho Student
 
     /**
@@ -30,7 +36,7 @@ public class Student {
     Student(Student s) {
         // TODO:
     }
-xxxxxxx
+
     String getInfo() {
         // TODO:
         return null; // xóa dòng này sau khi cài đặt
