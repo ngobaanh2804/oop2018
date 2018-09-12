@@ -30,7 +30,7 @@ public class Student {
     Student(Student s) {
         // TODO:
     }
-
+xxxxxxx
     String getInfo() {
         // TODO:
         return null; // xóa dòng này sau khi cài đặt
