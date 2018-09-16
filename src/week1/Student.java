@@ -16,7 +16,11 @@ public class Student {
      * Constructor 1
      */
     Student() {
-        // TODO:
+        this.name="student";
+        this.id="000";
+        this.group="INT22041";
+        this.email="uet.@vnu.edu.vn";
+        // TODO:Phuong thuc khoi tao khong co tham so : Strudent()
     }
 
     /**
@@ -26,7 +30,11 @@ public class Student {
      * @param em
      */
     Student(String n, String sid, String em) {
-        // TODO:
+        this,name=n;
+        this.id=sid;
+        this.email=em;
+        this.group="INT22041";
+        // TODO:phuong thuc khoi tao co tham so: Student()
     }
 
     /**
@@ -40,5 +48,10 @@ public class Student {
     String getInfo() {
         // TODO:
         return null; // xóa dòng này sau khi cài đặt
+    }
+    String getInfo() {
+        String this = name + " " + id + " " + group +" " +email;
+        return this;
+        // TODO:phuong thuc String getInfo()
     }
 }
