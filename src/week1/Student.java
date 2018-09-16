@@ -1,10 +1,7 @@
 package week1;
 
 public class Student {
-        private String name;
-        private String id;
-        private String group;
-        private String email;
+        private String name,id,group,email;
     // TODO: khai báo các thuộc tính cho Student
         public  String getName(){   return name; }      public void setName(){ this.name=name;}
         public  String getId(){     return id; }        public void setId(){ this.id=id;}
@@ -42,7 +39,11 @@ public class Student {
      * @param s
      */
     Student(Student s) {
-        // TODO:
+        this.name=s.name;
+        this.id=s.id;
+        this.group=s.group;
+        this.email=s,email;
+        // TODO:phuong thuc khoi tao sao chep student
     }
 
     String getInfo() {
