@@ -52,6 +52,6 @@ public class Student {
     String getInfo() {
         String this = name + " " + id + " " + group +" " +email;
         return this;
-        // TODO:phuong thuc String getInfo()
+        // TODO:phuong thuc String getInfo() in ra name id group email
     }
 }
