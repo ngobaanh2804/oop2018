@@ -1,41 +1,38 @@
 package week1;
-
 public class Student {
+
     private String name;
     private String id;
+
     private String group;
     private String email;
 
-    // TODO: khai báo các thuộc tính cho Student
-    public String getName() {
+    public String getName(){
         return name;
     }
-
-    public void setName() {
+    public void setName(String name){
         this.name = name;
     }
 
-    public String getId() {
+    public String getId(){
         return id;
     }
-
-    public void setId() {
+    public void setId(String id){
         this.id = id;
     }
+    public String getGroup(){return group;}
 
-    public String getGroup() {
-        return group;
-    }
+    public void setGroup(String group)
+    {
 
-    public void setGroup() {
         this.group = group;
     }
 
-    public String getEmail() {
-        return email;
-    }
+    public String getEmail(){return email;}
 
-    public void setEmail() {
+    public void setEmaill(String email)
+    {
+
         this.email = email;
     }
     // TODO: khai báo các phương thức getter, setter cho Student
@@ -44,44 +41,52 @@ public class Student {
      * Constructor 1
      */
     Student() {
-        this.name = "student";
+        this.name = "Student";
+
         this.id = "000";
+
         this.group = "INT22041";
-        this.email = "uet.@vnu.edu.vn";
-        // TODO:Phuong thuc khoi tao khong co tham so : Strudent()
+
+        this.email = "uet@vnu.edu.vn";
+
+        // TODO:
     }
 
     /**
      * Constructor 2
-     *
      * @param n
      * @param sid
      * @param em
      */
     Student(String n, String sid, String em) {
         this.name = n;
-        this.id = sid;
+
+        this.id =sid;
+        this.group="INT20041";
         this.email = em;
-        this.group = "INT22041";
-        // TODO:phuong thuc khoi tao co tham so: Student()
+
+        // TODO:
     }
 
     /**
      * Constructor 3
-     *
      * @param s
      */
     Student(Student s) {
-        this.name = s.name;
+        this.name  = s.name;
+
         this.id = s.id;
+
         this.group = s.group;
+
         this.email = s.email;
-        // TODO:phuong thuc khoi tao sao chep student
+        // TODO:
     }
 
     String getInfo() {
-        String s = name + " " + id + " " + group + " " + email ;
-        // TODO:phuong thuc in ra name id group email
-        return null; // xóa dòng này sau khi cài đặt
+        String s = this.name + " " + this.id + " " + this.group +" " +this.email;
+        return s;
+        // TODO:
+
     }
 }
