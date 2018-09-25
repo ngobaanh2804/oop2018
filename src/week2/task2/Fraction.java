@@ -24,6 +24,7 @@ public class Fraction {
     public void setDenominator(int denominator) {
         this.denominator = denominator;
     }
+        // TODO: getter setter
 
     public Fraction add(Fraction other) {
         Fraction ps = new Fraction(0,1);
@@ -55,5 +56,13 @@ public class Fraction {
         ps.denominator=this.denominator * other.numerator;
         return ps;
         // TODO: Phương thức chia hai phân số (this và other), trả về đối tượng Fraction mới
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+     Fraction PS = (Fraction) obj;
+     int temp =(this.numerator * PS.denominator) - (this.denominator * PS.numerator);
+     if(temp==0)        return true;
+     else return false;
     }
 }
