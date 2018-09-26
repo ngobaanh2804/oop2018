@@ -30,6 +30,6 @@ public class Task1 {
     public static void main(String Args[])
     {
         System.out.println(gcd(5,10));
-        System.out.println(fibonacci(10));
+        System.out.println(fibonacci(4));
     }
 }

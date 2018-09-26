@@ -64,13 +64,4 @@ public class Fraction {
      if(temp==0)        return true;
      else return false;
     }
-    public static void main (String[]args){
-        Fraction ps1 = new Fraction(2,3);
-        Fraction ps2 = new Fraction(2,3);
-        System.out.println(ps1.add(ps2));
-        System.out.println(ps1.subtract(ps2));
-        System.out.println(ps1.multiply(ps2));
-        System.out.println(ps1.divide(ps2));
-        System.out.println("ps1=ps2 la true hay false : "+ps1.equals(ps2));
-    }
 }
