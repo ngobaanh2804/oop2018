@@ -12,8 +12,7 @@ public class Fraction {
         // TODO: khởi tạo giá trị cho các thuộc tính numberator (tử số), denominator (mẫu số)
     }
 
-    public int getNumerator() {
-        return numerator;
+    public int getNumerator() { return numerator;
     }
     public void setNumerator(int numerator) {
         this.numerator = numerator;
