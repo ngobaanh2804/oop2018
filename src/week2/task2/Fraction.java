@@ -1,67 +1,82 @@
 package week2.task2;
 
 public class Fraction {
-    private int numerator;
-    private int denominator;
 
     // TODO: khai báo các thuộc tính
+    int tu;
+    int mau;
+    public static int gcd(int a, int b) {
+        // TODO: Tính ước chung lớn nhất của 2 số a, b
+        if(b==0) return a;
+        return gcd(b,a%b);
+
+    }
 
     public Fraction(int numerator, int denominator) {
-        this.numerator=numerator;
-        this.denominator=denominator;
         // TODO: khởi tạo giá trị cho các thuộc tính numberator (tử số), denominator (mẫu số)
+        this.tu=numerator;
+        this.mau=denominator;
     }
-
-    public int getNumerator() { return numerator;
-    }
-    public void setNumerator(int numerator) {
-        this.numerator = numerator;
-    }
-    public int getDenominator() {
-        return denominator;
-    }
-    public void setDenominator(int denominator) {
-        this.denominator = denominator;
-    }
-        // TODO: getter setter
 
     public Fraction add(Fraction other) {
-        Fraction ps = new Fraction(0,1);
-        ps.numerator=this.numerator * other.denominator + this.denominator * other.numerator;
-        ps.denominator=this.denominator * other.denominator;
-        return ps;
         // TODO: Phương thức cộng hai phân số (this và other), trả về đối tượng Fraction mới
+        int ts = this.tu * other.mau + other.tu * this.mau;
+        int ms = this.mau * other.mau;
+        int u = gcd(ts, ms);
+        ts = ts/u;
+        ms = ms/u;
+        Fraction phanSoTong = new Fraction(ts, ms);
+        return phanSoTong;
     }
 
     public Fraction subtract(Fraction other) {
-        Fraction ps = new Fraction(0,1);
-        ps.numerator=this.numerator * other.denominator - this.denominator * other.numerator;
-        ps.denominator=this.denominator * other.denominator;
-        return ps;
         // TODO: Phương thức trừ hai phân số (this và other), trả về đối tượng Fraction mới
+        int ts = this.tu * other.mau - other.tu * this.mau;
+        int ms = this.mau * other.mau;
+        int u = gcd(ts, ms);
+        ts = ts/u;
+        ms = ms/u;
+        Fraction phanSoHieu = new Fraction(ts, ms);
+        return phanSoHieu;
+
     }
 
     public Fraction multiply(Fraction other) {
-        Fraction ps = new Fraction(0,1);
-        ps.numerator=this.numerator * other.numerator;
-        ps.denominator=this.denominator * other.denominator;
-        return ps;
         // TODO: Phương thức nhân hai phân số (this và other), trả về đối tượng Fraction mới
+        int ts = this.tu * other.tu;
+        int ms = this.mau * other.mau;
+        int u = gcd(ts, ms);
+        ts = ts/u;
+        ms = ms/u;
+        Fraction phanSoTich = new Fraction(ts, ms);
+        return phanSoTich;
+
     }
 
     public Fraction divide(Fraction other) {
-        Fraction ps = new Fraction(0,1);
-        ps.numerator=this.numerator * other.denominator;
-        ps.denominator=this.denominator * other.numerator;
-        return ps;
         // TODO: Phương thức chia hai phân số (this và other), trả về đối tượng Fraction mới
-    }
+        int ts = this.tu * other.mau;
+        int ms = this.mau * other.tu;
+        int u = gcd(ts, ms);
+        ts = ts/u;
+        ms = ms/u;
+        Fraction phanSoThuong = new Fraction(ts, ms);
+        return phanSoThuong;
 
-    @Override
-    public boolean equals(Object obj) {
-     Fraction PS = (Fraction) obj;
-     int temp =(this.numerator * PS.denominator) - (this.denominator * PS.numerator);
-     if(temp==0)        return true;
-     else return false;
+    }
+    public boolean equals(Object object){
+        if (object instanceof Fraction){
+            Fraction other = (Fraction) object;
+            if (other.mau*this.tu == other.tu*this.mau)
+                return true;
+            else return false;
+        }
+        return false;
+    }
+    public static void main(String[] Args)
+    {
+        Fraction ps1 = new Fraction(4,5);
+        Fraction ps2 = new Fraction(9,10);
+        System.out.println((ps1.add(ps2)));
     }
 }
